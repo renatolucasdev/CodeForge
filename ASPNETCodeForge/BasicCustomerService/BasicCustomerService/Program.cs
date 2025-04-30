@@ -1,9 +1,12 @@
+using BasicCustomerService.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.AddDbContextConfig();
 
 var app = builder.Build();
 

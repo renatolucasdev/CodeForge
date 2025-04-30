@@ -4,6 +4,8 @@ namespace BasicCustomerService.Models
 {
     public class Address
     {
+        [Key]
+        public int Id { get; set; }
         [Required(ErrorMessage = "{0} is required.")]
         public string? Street { get; set; }
         [Required(ErrorMessage = "{0} is required.")]

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BasicCustomerService.Models
 {
+    [NotMapped]
     public abstract class Person
     {
         [Required(ErrorMessage = "{0} is required.")]
