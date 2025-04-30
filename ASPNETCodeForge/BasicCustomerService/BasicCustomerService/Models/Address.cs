@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace BasicCustomerService.Models
 {
@@ -21,7 +22,9 @@ namespace BasicCustomerService.Models
         [Required(ErrorMessage = "{0} is required.")]
         public string? Email { get; set; }
         [Required(ErrorMessage = "{0} is required.")]
-        public int PersonId { get; set; }// Foreign key
-        public Person? Person { get; set; } // Navigation property
+        public int CustomerId { get; set; }// Foreign key
+
+        [JsonIgnore]
+        public Customer? Customer { get; set; } // Navigation property
     }
 }
